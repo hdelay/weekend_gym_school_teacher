@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* ============================================================
+    파일정의 : common.css
+============================================================ */
+
+:root {
+    /* color */
+    --main-color: rgb(255 114 0);
+    --sub-color-01: rgb(250 239 230);
+    --sub-color-02: rgb(231 231 231);
+    --font-color: rgb(59 59 59);
+ 
+    /* font size */
+    --font-s: 12px;
+    --font-common: 14px;
+}
+
+/* inner */
+.inner {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+    .inner {
+        width: 100%;
+    }
+}
+
+/* 정렬 */
+.agn_l {text-align: left !important;}
+.agn_c {text-align: center !important;}
+.agn_r {text-align: right !important;}
+
+/* pc/mobile */
+.mo_hidden {display: block !important;}
+.pc_hidden {display: none !important;}
+@media screen and (max-width: 768px) {
+    .mo_hidden {display: none !important;}
+    .pc_hidden {display: block !important;}
+}
+
+/* 버튼 */

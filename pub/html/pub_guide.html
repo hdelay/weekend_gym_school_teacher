@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리싱 가이드</title>
+
+    <!-- pub:css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub:js -->
+    <script src="../js/root.js"></script>
+    <script defer src="../js/common.js"></script>
+
+    <style>
+        .wrap_guide {
+            display: flex;
+            overflow-y: auto;
+            flex-wrap: wrap;
+            padding: 40px;
+            box-sizing: border-box;
+            height: 100vh;
+        }
+        .btn_guide {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .btn_guide h1 {
+            padding-bottom: 30px;
+        }
+        .btn_guide h1 a {
+            display: block;
+            font-size: var(--font-common);
+        }
+        .btn_guide ul {
+            display: flex;
+            flex-direction: column;
+        }
+        .btn_guide ul li + li {
+            margin-top: 20px;
+        }
+
+        .box_guide {
+            width: 100%;
+            padding-left: 180px;
+            box-sizing: border-box;
+        }
+        .box_guide .box_group {
+            border: 1px solid #ddd;
+            padding: 20px 30px;
+        }
+        .box_guide .box_group:hover {
+            border: 1px solid #000;
+        }
+        .box_guide .box_group + .box_group {
+            margin-top: 30px;
+        }
+        .box_guide .box_group > .box_item > h2 {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            font-size: var(--font-common);
+            font-weight: 300;
+        }
+        .box_guide .box_group > .box_item > h3{
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: var(--font-s);
+            font-weight: 300;
+        }
+        .box_item_cont > ul > li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        /*  */
+        @media screen and (max-width: 768px) {
+            .wrap_guide {
+                padding: 20px;
+            }
+            .btn_guide {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                flex-wrap: wrap;
+                width: 100%;
+                overflow-x: auto;
+                padding: 50px 20px 20px 20px;
+                background-color: #fff;
+                box-sizing: border-box;
+            }
+            .btn_guide h1 {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px 0;
+            }
+            .btn_guide h1 a {
+                text-align: center;
+            }
+            .btn_guide ul {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+            .btn_guide ul li {
+                white-space: nowrap;
+            }
+            .btn_guide ul li + li {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+            .box_guide {
+                padding: 0;
+                padding-top: 80px;
+            }
+            .box_guide .box_group {
+                padding: 10px;
+            }
+            .box_guide .box_group > .box_item > h2 {
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrap_guide">
+
+    <div class="btn_guide">
+        <h1><a href="">Design Guide</a></h1>
+        <ul>
+            <li><a href="#cont_01">로고</a></li>
+            <li><a href="#cont_02">제목</a></li>
+            <li><a href="#cont_03">컬러</a></li>
+            <li><a href="#cont_04">header</a></li>
+            <li><a href="#cont_05">버튼</a></li>
+            <li><a href="#cont_06">Form</a></li>
+            <li><a href="#cont_07">테이블</a></li>
+            <li><a href="#cont_08">Form Grid</a></li>
+            <li><a href="#cont_09">페이징</a></li>
+            <li><a href="#cont_10">서치박스</a></li>
+            <li><a href="#cont_11">리스트</a></li>
+        </ul>
+    </div>
+
+    <div class="box_guide">
+        <!-- 로고 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_01">로고</h2>
+                <div class="box_item_cont">
+                    <div style="display: flex; justify-content: flex-start; width: 215px; border: 1px solid #ddd; padding: 20px;">
+                        <h1 class="logo">
+                            <a href="" title="로고">
+                                <span>방과후 스포츠프로그램</span>
+                                <strong>신나는 주말체육학교<span>강사시스템</span></strong>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 제목 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_02">제목</h2>
+                <div class="box_item_cont">
+                    <p style="font-size: var(--font-common); font-weight: 100;">신나는 주말체육학교 :: NotoSansKR 100</p>
+                    <p style="font-size: var(--font-common); font-weight: 200;">신나는 주말체육학교 :: NotoSansKR 200</p>
+                    <p style="font-size: var(--font-common); font-weight: 300;">신나는 주말체육학교 :: NotoSansKR 300</p>
+                    <p style="font-size: var(--font-common); font-weight: 400;">신나는 주말체육학교 :: NotoSansKR 400</p>
+                    <p style="font-size: var(--font-common); font-weight: 500;">신나는 주말체육학교 :: NotoSansKR 500</p>
+                    <p style="font-size: var(--font-common); font-weight: 600;">신나는 주말체육학교 :: NotoSansKR 600</p>
+                    <p style="font-size: var(--font-common); font-weight: 700;">신나는 주말체육학교 :: NotoSansKR 700</p>
+
+                    <div class="box_tit">
+                        <h2>페이지명 또는 타이틀명</h2>
+                    </div>
+                    
+                    <div class="box_tit">
+                        <h3>강사 비밀번호 변경 안내</h3>
+                        <h3>depth2 제목이 보여집니다.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 컬러 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_03">컬러</h2>
+                <div class="box_item_cont">
+                    <ul style="display: flex; gap: 10px;">
+                        <li><span style="display:flex; align-items: center; justify-content: center; width: 150px; height: 100px; background-color: rgb(255 114 0); color: #fff;">메인컬러<br/>rgb(255 114 0)</span></li>
+                        <li><span style="display:flex; align-items: center; justify-content: center; width: 150px; height: 100px; background-color: rgb(250 239 230); color: #3b3b3b;">rgb(250 239 230)</span></li>
+                        <li><span style="display:flex; align-items: center; justify-content: center; width: 150px; height: 100px; background-color: rgb(231 231 231); color: #3b3b3b;">rgb(231 231 231)</span></li>
+                        <li><span style="display:flex; align-items: center; justify-content: center; width: 150px; height: 100px; background-color: rgb(59 59 59); color: #fff;">rgb(59 59 59)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_04">header</h2>
+                <div class="box_item_cont">
+
+                    <p style="background-color: rgb(231 231 231); font-size: 12px; padding: 10px;">logo + menu</p>
+                    <div style="width: 360px; height: 50px">
+                        <header>
+                            <div class="inner" style="width: 100%;">
+                    
+                                <!-- 로고 -->
+                                <h1 class="logo">
+                                    <a href="" title="로고">
+                                        <span>방과후 스포츠프로그램</span>
+                                        <strong>신나는 주말체육학교<span>강사시스템</span></strong>
+                                    </a>
+                                </h1>
+                                
+                                <!-- 전체메뉴 -->
+                                <div class="btn_allmenu">
+                                    <a href="" title="전체메뉴">
+                                        <strong>전체메뉴</strong>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <div class="box_allmenu">
+                                    <div class="box_allmenu_cont">
+                                        <div class="box_allmenu_btn">
+                                            <a href="">
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                        <div class="box_allmenu_info">
+                                            <div class="box_util">
+                                                <ul class="util_content">
+                                                    <li class="btn_login"><a href="MTMA001_00M.html" title="로그인">로그인</a></li>
+                                                </ul>
+                                                <!--
+                                                <ul class="util_result">
+                                                    <li><strong>황화정님</strong></li>
+                                                    <li class="btn_logout"><a href="" title="로그아웃">로그아웃</a></li>
+                                                </ul>
+                                                -->
+                                            </div>
+                                        </div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="홈">홈</a>
+                                                    <ul>
+                                                        <li><a href="./MTMA002_00M.html" title="홈">홈</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교안 수업일지">학교안 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS001_00M.html" title="학교안 수업일지 목록">학교안 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS003_00M.html" title="학교안 수업일지 작성">학교안 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교밖 수업일지">학교밖 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS002_00M.html" title="학교밖 수업일지 목록">학교밖 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS004_00M.html" title="학교밖 수업일지 작성">학교밖 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="공지사항">공지사항</a>
+                                                    <ul>
+                                                        <li><a href="./MTBS001_00M.html" title="공지사항 목록">공지사항 목록</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                    <hr/>
+
+                    <p style="background-color: rgb(231 231 231); font-size: 12px; padding: 10px;">logo + back + menu</p>
+                    <div style="width: 360px; height: 50px">
+                        <header>
+                            <div class="inner" style="width: 100%;">
+                                <!-- 뒤로가기 -->
+                                <div class="box_prev">
+                                    <a href="" title="뒤로가기">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                    
+                                <!-- 로고 -->
+                                <h1 class="logo">
+                                    <a href="" title="로고">
+                                        <span>방과후 스포츠프로그램</span>
+                                        <strong>신나는 주말체육학교<span>강사시스템</span></strong>
+                                    </a>
+                                </h1>
+                                
+                                <!-- 전체메뉴 -->
+                                <div class="btn_allmenu">
+                                    <a href="" title="전체메뉴">
+                                        <strong>전체메뉴</strong>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <div class="box_allmenu">
+                                    <div class="box_allmenu_cont">
+                                        <div class="box_allmenu_btn">
+                                            <a href="">
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                        <div class="box_allmenu_info">
+                                            <div class="box_util">
+                                                <ul class="util_content">
+                                                    <li class="btn_login"><a href="MTMA001_00M.html" title="로그인">로그인</a></li>
+                                                </ul>
+                                                <!--
+                                                <ul class="util_result">
+                                                    <li><strong>황화정님</strong></li>
+                                                    <li class="btn_logout"><a href="" title="로그아웃">로그아웃</a></li>
+                                                </ul>
+                                                -->
+                                            </div>
+                                        </div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="홈">홈</a>
+                                                    <ul>
+                                                        <li><a href="./MTMA002_00M.html" title="홈">홈</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교안 수업일지">학교안 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS001_00M.html" title="학교안 수업일지 목록">학교안 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS003_00M.html" title="학교안 수업일지 작성">학교안 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교밖 수업일지">학교밖 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS002_00M.html" title="학교밖 수업일지 목록">학교밖 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS004_00M.html" title="학교밖 수업일지 작성">학교밖 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="공지사항">공지사항</a>
+                                                    <ul>
+                                                        <li><a href="./MTBS001_00M.html" title="공지사항 목록">공지사항 목록</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                    <hr/>
+
+                    <p style="background-color: rgb(231 231 231); font-size: 12px; padding: 10px;">only logo</p>
+                    <div style="width: 360px; height: 50px">
+                        <header>
+                            <div class="inner" style="width: 100%;">
+                                <!-- 로고 -->
+                                <h1 class="logo">
+                                    <a href="" title="로고">
+                                        <span>방과후 스포츠프로그램</span>
+                                        <strong>신나는 주말체육학교<span>강사시스템</span></strong>
+                                    </a>
+                                </h1>
+                            </div>
+                        </header>
+                    </div>
+                    <hr/>
+
+                    <p style="background-color: rgb(231 231 231); font-size: 12px; padding: 10px;">서브메뉴</p>
+                    <div style="width: 360px; height: 50px">
+                        <header>
+                            <div class="inner" style="width: 100%;">
+                                <!-- 뒤로가기 -->
+                                <div class="box_prev">
+                                    <a href="" title="뒤로가기">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                                
+                                <!-- 전체메뉴 -->
+                                <div class="btn_allmenu">
+                                    <a href="" title="전체메뉴">
+                                        <strong>전체메뉴</strong>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <div class="box_allmenu">
+                                    <div class="box_allmenu_cont">
+                                        <div class="box_allmenu_btn">
+                                            <a href="">
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                        <div class="box_allmenu_info">
+                                            <div class="box_util">
+                                                <ul class="util_content">
+                                                    <li class="btn_login"><a href="MTMA001_00M.html" title="로그인">로그인</a></li>
+                                                </ul>
+                                                <!--
+                                                <ul class="util_result">
+                                                    <li><strong>황화정님</strong></li>
+                                                    <li class="btn_logout"><a href="" title="로그아웃">로그아웃</a></li>
+                                                </ul>
+                                                -->
+                                            </div>
+                                        </div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="홈">홈</a>
+                                                    <ul>
+                                                        <li><a href="./MTMA002_00M.html" title="홈">홈</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교안 수업일지">학교안 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS001_00M.html" title="학교안 수업일지 목록">학교안 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS003_00M.html" title="학교안 수업일지 작성">학교안 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="학교밖 수업일지">학교밖 수업일지</a>
+                                                    <ul>
+                                                        <li><a href="./MTRS002_00M.html" title="학교밖 수업일지 목록">학교밖 수업일지 목록</a></li>
+                                                        <li><a href="./MTRS004_00M.html" title="학교밖 수업일지 작성">학교밖 수업일지 작성</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" title="공지사항">공지사항</a>
+                                                    <ul>
+                                                        <li><a href="./MTBS001_00M.html" title="공지사항 목록">공지사항 목록</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                    <hr/>
+
+                </div>
+            </div>
+        </div>
+        <!-- 버튼 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_05">버튼</h2>
+                <div class="box_item_cont">
+                    <div class="box_btn" style="width: 200px;">
+                        <a href="javascript:void(0);" data-animation="ripple">자세히보기</a>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin-top: 5px;">
+                        <button data-animation="ripple">검색하기</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin-top: 5px;">
+                        <a href="javascript:void(0);" class="email" data-animation="ripple">이메일 문의하기</a>
+                    </div>
+
+                    <div class="box_btn type_more">
+                        <button data-animation="ripple" class="">더보기</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_add">자녀 추가등록</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_blue">파란버튼</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_black">검은버튼</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_white">흰색버튼</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_gray">회색버튼</button>
+                    </div>
+                    <div class="box_btn" style="width: 200px; margin: 5px;">
+                        <button data-animation="ripple" class="btn_sky">하늘색버튼</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Form -->
+        <div class="box_group">
+            <div class="box_item" id="cont_06">
+                <h2>Form</h2>
+                <div class="box_item_cont">
+                    
+                </div>
+            </div>
+            <div class="box_item">
+                <h3>인풋박스</h3>
+                <div class="box_item_cont">
+                    <div class="box_input">
+                        <input type="text">
+                    </div>
+                </div>
+                검색박스
+                <div class="box_input search">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="box_item">
+                <h3>데이트피커</h3>
+                <div class="box_item_cont">
+                    
+                </div>
+            </div>
+            <div class="box_item">
+                <h3>셀렉트박스</h3>
+                <div class="box_item_cont">
+                    <div class="box_select">
+                        <select id="">
+                            <option value="">시도선택</option>
+                            <option value="">시도선택</option>
+                            <option value="">시도선택</option>
+                            <option value="">시도선택</option>
+                        </select>
+                        <span></span>
+                    </div>
+                    <div class="box_sel">
+                        <select id="">
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                        </select>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="box_item">
+                <h3>라디오박스</h3>
+                <div class="box_item_cont">
+
+                    <div class="box_rdo_group">
+                        <div class="box_rdo">
+                            <input type="radio" id="rdo_01" name="rdo_group">
+                            <label for="rdo_01">시군구체육회</label>
+                        </div>
+                        <div class="box_rdo">
+                            <input type="radio" id="rdo_02" name="rdo_group">
+                            <label for="rdo_02">공공스포츠클럽</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="box_radio_group">
+                        <div class="box_radio">
+                            <input type="radio" id="radio_01" name="radio_group">
+                            <label for="radio_01">시군구체육회</label>
+                        </div>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_02" name="radio_group">
+                            <label for="radio_02">공공스포츠클럽</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="box_rdo_group type_02">
+                        <div class="box_rdo">
+                            <input type="radio" id="rdo_01" name="rdo_group">
+                            <label for="rdo_01">시군구체육회</label>
+                        </div>
+                        <div class="box_rdo">
+                            <input type="radio" id="rdo_02" name="rdo_group">
+                            <label for="rdo_02">공공스포츠클럽</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br/>
+            <div class="box_item">
+                <h3>체크박스</h3>
+                <div class="box_item_cont">
+                    
+                    <div class="box_chk_group">
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_01">
+                            <label for="chk_01">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_02">
+                            <label for="chk_02">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_03">
+                            <label for="chk_03">시군구체육회</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="box_chk_group">
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_04">
+                            <label for="chk_04">&nbsp;</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="box_chk_group type_02">
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_001">
+                            <label for="chk_001">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_002">
+                            <label for="chk_002">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_003">
+                            <label for="chk_003">시군구체육회</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="box_chk_group type_03">
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_0001">
+                            <label for="chk_0001">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_0002">
+                            <label for="chk_0002">시군구체육회</label>
+                        </div>
+                        <div class="box_chk">
+                            <input type="checkbox" id="chk_0003">
+                            <label for="chk_0003">시군구체육회</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 테이블 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_07">Form Grid</h2>
+                <div class="box_item_cont">
+                    
+                    <div class="table_info">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="110px" />
+                                <col width="" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="input_08">이름</label></th>
+                                    <td>
+                                        <div class="box_input_group">
+                                            <div class="box_input min">
+                                                <input type="text" value="김삿갓" id="input_08">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="select_01">생년월일</label></th>
+                                    <td>
+                                        <div class="box_input_group birth">
+                                            <div class="box_sel min">
+                                                <select id="select_01">
+                                                    <option value="">1920</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                            <div class="box_sel">
+                                                <select id="select_02">
+                                                    <option value="">01</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                            <div class="box_sel">
+                                                <select id="select_03">
+                                                    <option value="">04</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="radio_06">성별</label></th>
+                                    <td>
+                                        <div class="box_radio_group">
+                                            <div class="box_radio">
+                                                <input type="radio" id="radio_06" name="radio_group_04" checked disabled>
+                                                <label for="radio_06">남자</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_10">연락처(자녀)</label></th>
+                                    <td>
+                                        <div class="box_input_group tell">
+                                            <div class="box_input">
+                                                <input type="text" value="010" id="input_10">
+                                            </div>
+                                            <div class="box_input">
+                                                <input type="text" value="1234" id="input_11">
+                                            </div>
+                                            <div class="box_input">
+                                                <input type="text" value="1234" id="input_12">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_10">학생구분</label></th>
+                                    <td>
+                                        <div class="box_input_group">
+                                            <div class="box_radio_group column">
+                                                <div class="box_radio">
+                                                    <input type="radio" id="radio_06" name="radio_group_05" checked disabled>
+                                                    <label for="radio_06">학생</label>
+                                                </div>
+                                                <div class="box_radio">
+                                                    <input type="radio" id="radio_06" name="radio_group_05" checked disabled>
+                                                    <label for="radio_06">동 연령대 청소년</label>
+                                                </div>
+                                            </div>
+                                            <div class="box_sel min">
+                                                <select id="">
+                                                    <option value="">일반청소년</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_13">학교명</label></th>
+                                    <td>
+                                        <div class="box_input_group">
+                                            <div class="box_input min">
+                                                <input type="text" value="가나중" id="input_13">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input_14">학년/반</label></th>
+                                    <td>
+                                        <div class="box_input_group half">
+                                            <div class="box_input min">
+                                                <input type="text" value="3" id="input_14">
+                                            </div>
+                                            <div class="box_input min">
+                                                <input type="text" value="3" id="input_15">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Form Grid -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_08">테이블</h2>
+                <div class="box_item_cont">
+                    <div class="table_data">
+                        <table>
+                            <caption>데이터 폼</caption>
+                            <colgroup>
+                                <col width="5%"/>
+                                <col width="8%"/>
+                                <col width="10%"/>
+                                <col width="10%"/>
+                                <col width="13%"/>
+                                <col width="21%"/>
+                                <col width=""/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">NO.</th>
+                                    <th scope="col">시도</th>
+                                    <th scope="col">시군구</th>
+                                    <th scope="col">담당자명</th>
+                                    <th scope="col">문의연락처</th>
+                                    <th scope="col">이메일</th>
+                                    <th scope="col">홈페이지</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="agn_c">서울</td>
+                                    <td class="agn_c">영등포구</td>
+                                    <td class="agn_c">전성훈</td>
+                                    <td class="agn_c">02-3461-3999</td>
+                                    <td>spcosa@hanmail.com</td>
+                                    <td><a href="http://dhsports.or.kr/">http://dhsports.or.kr/</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="agn_c">서울</td>
+                                    <td class="agn_c">영등포구</td>
+                                    <td class="agn_c">전성훈</td>
+                                    <td class="agn_c">02-3461-3999</td>
+                                    <td>spcosa@hanmail.com</td>
+                                    <td><a href="http://dhsports.or.kr/">http://dhsports.or.kr/</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="agn_c">서울</td>
+                                    <td class="agn_c">영등포구</td>
+                                    <td class="agn_c">전성훈</td>
+                                    <td class="agn_c">02-3461-3999</td>
+                                    <td>spcosa@hanmail.com</td>
+                                    <td><a href="http://dhsports.or.kr/">http://dhsports.or.kr/</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="agn_c">서울</td>
+                                    <td class="agn_c">영등포구</td>
+                                    <td class="agn_c">전성훈</td>
+                                    <td class="agn_c">02-3461-3999</td>
+                                    <td>spcosa@hanmail.com</td>
+                                    <td><a href="http://dhsports.or.kr/">http://dhsports.or.kr/</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="agn_c">서울</td>
+                                    <td class="agn_c">영등포구</td>
+                                    <td class="agn_c">전성훈</td>
+                                    <td class="agn_c">02-3461-3999</td>
+                                    <td>spcosa@hanmail.com</td>
+                                    <td><a href="http://dhsports.or.kr/">http://dhsports.or.kr/</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    팝업테이블
+                    <div class="table_row">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="30%" />
+                                <col width="20%" />
+                                <col width="30%" />
+                            </colgroup>
+                            <tbody>
+                                <tr class="half">
+                                    <th scope="row">총원</th>
+                                    <td>20 명</td>
+                                    <th scope="row">출석인원</th>
+                                    <td>16 명</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    회원정보 테이블
+                    <div class="table_info">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="110px" />
+                                <col width="" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">아이디</th>
+                                    <td>yatho</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">비밀번호</th>
+                                    <td>******</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이름</th>
+                                    <td>******</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">생년월일</th>
+                                    <td>******</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">성별</th>
+                                    <td>******</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용자 연락처</th>
+                                    <td>******</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    가로스크롤 테이블
+                    <div class="table_responsive">
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="35%;" />
+                                <col width="" />
+                                <col width="20%;" />
+                                <col width="20%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">총원</th>
+                                    <th scope="col">남자</th>
+                                    <th scope="col">여자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                                <tr>
+                                    <td class="agn_c"><span class="color_black">전체</span></td>
+                                    <td class="agn_c"><span class="color_blue">4,564</span></td>
+                                    <td class="agn_c">3,545(77.67%)</td>
+                                    <td class="agn_c">1,019(22.33%)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 페이징 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_09">페이징</h2>
+            </div>
+            <div class="box_item_cont">
+                <div class="box_paging">
+                    <ul>
+                        <li class="prev"><a href="javascript:void(0);" title="이전페이지로 이동">이전페이지로 이동</a></li>
+                        <li class="on"><a href="javascript:void(0);">01</a></li>
+                        <li><a href="javascript:void(0);">02</a></li>
+                        <li><a href="javascript:void(0);">03</a></li>
+                        <li><a href="javascript:void(0);">04</a></li>
+                        <li><a href="javascript:void(0);">05</a></li>
+                        <li class="next"><a href="javascript:void(0);" title="다음페이지로 이동">다음페이지로 이동</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 서치박스 -->
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_10">리스트</h2>
+                <div class="box_item_cont">
+                    <div class="box_text_list">
+                        <ul>
+                            <li><strong class="color_blue">올해부터 정원 20명 기준 15%(3명) 동연령대 청소년은 우선모집 대상으로 신청시간과 관계없이 우선권으로 1번부터 3번까지 들어가게 됩니다.</strong></li>
+                            <li><strong class="color_blue">우선대상(1~3번) 이후 신청자는 일반학생과 동일하며 동연령대 청소년 신청자가 없는 경우에는 선착순 신청 순서대로 신청현황이 보여집니다.</strong></li>
+                            <li>동연령대 청소년 : 학교에 다니지 않는 청소년을 말함</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 리스트 -->
+        <div class="box_group"></div>
+
+    </div>
+
+</div>
+</body>
+</html>

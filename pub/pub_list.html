@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신나는 주말체육학교-강사시스템 list</title>
+    <script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+</head>
+<style>
+    table {border-collapse:collapse;border-spacing:0;}
+    table th, strong {font-weight:normal;}
+    body{margin:20px;}
+    h1{margin:0 0 10px 0;}
+    a {display: block; text-decoration:none;}
+    a:hover {text-decoration:underline;}
+    .header {display: flex; justify-content: space-between; flex-wrap: wrap;}
+    hr {width: 100%;}
+    .header h1 {display: flex; align-items: center;}
+    .header > div {background-color: #f3f3f3; padding: 0 30px; border-radius: 50px;}
+    .header div p {text-align: right; margin: 0; line-height: 30px; font-size: 14px;}
+    .list_w table {width:100%;margin:20px auto;border-top: solid 2px #555;border-collapse:collapse;border-spacing:0;font-size:12px;text-align:left;}
+    .list_w table tr:hover {background:#f3f3f3;}
+    .list_w table th {padding: 7px 5px;	border: solid 1px #ddd;background: #efefef;vertical-align:middle;}
+    .list_w table td {padding: 7px 3px;border:solid 1px #ccc;vertical-align:middle;}
+    .list_w table td:nth-child(2) {text-align: left;}
+    .list_w table tr.on td {background: rgb(227, 235, 227);}
+    .list_w table tr.title th {background:#666;color:#fff;font-size:18px;border:0;padding-top:7px;}
+    .lastmdate {color: #1155CC;}
+    .stand_by {color:#777;}
+    .ing {color:#4848D4;}
+    .end {color:green;}
+    .list_w table td.link,
+    .list_w table td.etc{text-align: left; padding-left:10px;}
+    #list th{background: #fff;}
+    .list_w thead tr th {text-align: center;}
+    #list tr:hover th {background: #f3f3f3;}
+    #list tr th:nth-child(1),
+    #list tr th:nth-child(7),
+    #list tr th:nth-child(8) {text-align: center;}
+    .header > div.file {background-color: transparent; padding: 0; border-radius: 0;}
+    .file ul {display: flex; flex-wrap: wrap; gap: 5px 10px; padding: 0; margin: 0;}
+    .file li {list-style: none;}
+    .file li a {display: flex; padding: 8px 20px; background-color: #f5f5f5; border-radius: 50px; font-size: 12px;}
+    .file li.front a {background-color: #4848D4; color: #fff;}
+    .file li:hover a {text-decoration: none; background-color: #666; color: #fff;}
+    .file li.front:hover a {background-color: #181866;}
+    .design div {display: flex; justify-content: center;}
+    .design div a {display: flex; justify-content: center; border-radius: 20px; padding: 3px 15px; background-color: #4848D4; color: #fff;}
+    .design div a.none {background-color: #aaa;}
+</style>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>신나는 주말체육학교-강사시스템</h1>
+            <div>
+                <p>완료된 페이지 : <span class="curr_n"></span>page / Total : <span class="total_n"></span>page</p>
+                <p>진행율 : <span class="per"></span></p>
+            </div>
+            <hr />
+            <div class="file">
+                <ul>
+                    <li class="front"><a href="https://hdelay.github.io/weekend_gym_school/pub/pub_list.html" download>사용자 리스트</a></li>
+                    <!-- <li><a href="./file/20220614pub.zip" title="다운로드 받기" download>20220614 ver.1</a></li> -->
+                </ul>
+            </div>
+            <hr />
+        </div>
+
+        <div class="list_w">
+            <table class="codinglist">
+                <colgroup>
+                    <col width="3%" />
+                    <col width="15%" />
+                    <col width="25%" />
+                    <col width="18%" />
+                    <col width="8%" />
+                    <col width="4%" />
+                    <col width="8%" />
+                    <col width="*" />
+                </colgroup>
+                <thead>
+                    <tr class="title">
+                        <th colspan="8">신나는 주말체육학교 강사시스템(모바일)</th>
+                    </tr>
+                    <tr>
+                        <th>no.</th>
+                        <th>구분</th>
+                        <th>페이지명</th>
+                        <th>경로</th>
+                        <th>날짜</th>
+                        <th>상태</th>
+                        <th>디자인</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script defer>
+        
+        $(function(){
+            let menuTableHeader = ['type', '구분','페이지명','경로','날짜','상태','디자인','비고']
+    
+            // 객체 초기화
+            let menuDefault = {
+                type:'',
+                division: '',
+                depth1:'',
+                path:'',
+                date:'',
+                con:'',
+                design:'',
+                etc:''
+            };
+        
+            // 배열 추가
+            let menuTableList = [
+                //value값이 없으면 빈문자열로 남기기
+                {
+                    division: '퍼블리싱 가이드',
+                    depth1:'',
+                    path:'./html/pub_guide.html',
+                    date:'',
+                    con:'작업중',
+                    design:'',
+                    etc:''
+                },
+                // {
+                //     division: 'gnb + header + footer',
+                //     depth1:'',
+                //     path:'./html/layout.html',
+                //     date:'',
+                //     con:'',
+                //     design:'',
+                //     etc:''
+                // },
+                {
+                    division: '강사',
+                    depth1:'강사 모바일 메인(로그인)',
+                    path:'./html/MTMA001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/RMDRDQr" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'아이디 찾기',
+                    path:'./html/MTMA001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/GE6P6em" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'아이디 찾기 - 결과',
+                    path:'./html/MTMA001_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/9q6G6Yw" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'비밀번호 재설정 - 확인',
+                    path:'./html/MTMA001_03M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/no0B0WJ" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'비밀번호 재설정 - 재설정',
+                    path:'./html/MTMA001_04M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/L4gqgY6" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'비밀번호 변경 안내',
+                    path:'./html/MTMA001_05M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/z89d958" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'강사 모바일 메인화면',
+                    path:'./html/MTMA002_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/no0B0lJ" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 수업일지 목록',
+                    path:'./html/MTRS001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/3X6r6ky" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 수업일지 상세',
+                    path:'./html/MTRS001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/B16v6oe" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 수업일지 목록',
+                    path:'./html/MTRS002_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/r1gAgg1" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 수업일지 상세',
+                    path:'./html/MTRS002_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/r1gAgjL" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 수업일지 등록 - 프로그램 선택',
+                    path:'./html/MTRS003_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/6N6A6Od" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 수업일지 등록 - 수업내용 및 사진첨부 화면',
+                    path:'./html/MTRS003_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/RMDRDve" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 수업일지 등록 - 출석정보입력 화면',
+                    path:'./html/MTRS003_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/6N6A6ej" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 수업일지 등록 - 프로그램 선택',
+                    path:'./html/MTRS004_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/Dl6N6R3" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 수업일지 등록 - 수업내용 및 사진첨부 화면',
+                    path:'./html/MTRS004_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/vM5j5rY" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 수업일지 등록 - 출석정보입력 화면',
+                    path:'./html/MTRS004_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/7w6g6nK" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'공지사항 목록',
+                    path:'./html/MTBS001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/B16v6lq" target="_blank">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'공지사항 상세',
+                    path:'./html/MTBS001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="https://zpl.io/6N6A6Pd" target="_blank">디자인</a>',
+                    etc:''
+                },
+
+                // 관리자
+                {
+                    division: '관리자',
+                    depth1:'관리자 모바일 메인(로그인)',
+                    path:'./html/MAMA001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 아이디 찾기_01',
+                    path:'./html/MAMA001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 아이디 찾기_02',
+                    path:'./html/MAMA001_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 비밀번호 재설정_01',
+                    path:'./html/MAMA001_03M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 비밀번호 재설정_02',
+                    path:'./html/MAMA001_04M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 비밀번호 변경 안내',
+                    path:'./html/MAMA001_05M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'관리자 모바일 메인화면',
+                    path:'./html/MAMA002_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 실적목록',
+                    path:'./html/MARS001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 실적상세',
+                    path:'./html/MARS001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 실적수정',
+                    path:'./html/MARS001_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 출석확인',
+                    path:'./html/MARS001_03M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교안 출석확인 - 개인정보 다운로드 사유 입력',
+                    path:'./html/MARS001_04M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 실적목록',
+                    path:'./html/MARS002_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 실적상세',
+                    path:'./html/MARS002_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 실적수정',
+                    path:'./html/MARS002_02M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 출석확인',
+                    path:'./html/MARS002_03M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'학교밖 출석확인 - 개인정보 다운로드 사유 입력',
+                    path:'./html/MARS002_04M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'공지사항 목록',
+                    path:'./html/MABS001_00M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+                {
+                    division: '',
+                    depth1:'공지사항 상세',
+                    path:'./html/MABS001_01M.html',
+                    date:'',
+                    con:'',
+                    design:'<a href="" target="_blank" class="none">디자인</a>',
+                    etc:''
+                },
+            ];
+        
+
+            // 작업리스트 화면에 출력
+            let html;
+            for(let i=0; i < menuTableList.length; i++){
+                html += '<tr>'
+                html += '<th class="no">'+(i+1)+'</th>'
+                html += '<th>'+menuTableList[i].division+'</th>'
+                html += '<th>'+menuTableList[i].depth1+'</th>'
+                html += '<th class="link"><a href='+menuTableList[i].path+' target="_blank">'+menuTableList[i].path+'</a></th>'
+                html += '<th class="date">'+menuTableList[i].date+'</th>'
+                html += '<th class="con">'+menuTableList[i].con+'</th>'
+                html += '<th class="design"><div>'+menuTableList[i].design+'</div></th>'
+                html += '<th class="etc">'+menuTableList[i].etc+'</th>'
+                html += '</tr>'
+            };
+            //현재 날짜 구하기 YYYY-MM-DD 형식
+            let time = new Date();
+            let year = time.getFullYear();
+            let month = ('0' + (time.getMonth() + 1)).slice(-2);
+            let day = ('0' + time.getDate()).slice(-2);    
+            let today = year + '-' + month + '-' + day;
+
+            //완료된 페이지 개수 구하기
+            let curr_n = 0;
+            for(let i=0; i < menuTableList.length; i++) {
+                if(menuTableList[i].con === '완료'){
+                    curr_n++;
+                    
+                    setTimeout(function(){
+                        $('.con').css({'color': 'blue'});
+                    }, 100);
+                }
+                setTimeout(function(){
+                    //작업이 완료된 페이지를 제외하고 나머지 표시
+                    $('.con').not('.con:contains(완료)').css('color','red');
+                    
+                    // 날짜가 오늘날짜와 같으면 화면에 표시
+                    $('.date:contains('+ today +')').css('color','red');
+                }, 100);
+            }
+            $('.curr_n').text(curr_n);
+
+            $('#list').html(html);
+            
+            // 전체 페이지 개수 구하기
+            let total_n = $('#list tr').length;
+            $('.total_n').text(total_n);
+
+            // 진행률 나타내기
+            $('.per').text(Math.floor((curr_n/total_n)*100) + '%');
+
+        });
+    </script>
+</body>
+</html>
