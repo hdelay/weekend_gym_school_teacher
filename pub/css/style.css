@@ -212,6 +212,24 @@
 }
 
 /* header */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
 header .inner {
     display: flex;
     justify-content: center;
@@ -273,4 +291,27 @@ header .logo {
 }
 .btn_allmenu a span:nth-child(3) {
     width: 70%;
+}
+
+/* 제목 */
+.box_tit {
+    display: flex;
+    flex-direction: column;
+}
+.box_tit.center {
+    align-items: center;
+}
+.box_tit.left {
+    align-items: flex-start;
+}
+.box_tit h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.box_tit h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.box_tit + .box_tit h3 {
+    margin-top: 27px;
 }

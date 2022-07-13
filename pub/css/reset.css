@@ -11,7 +11,7 @@ body {
     font-size: 16px;
     font-family: 'NotoSansKR', Arial, Sans-serif;
     font-weight: 400;
-    color: #222;
+    color: var(--font-color);
 }
 table, th, td, input, select, button, textarea, pre {
     font: inherit;
@@ -36,7 +36,7 @@ img {
 a {
     font-weight: 400;
     text-decoration: none;
-    color: #222;
+    color: var(--font-color);
 }
 table {
     border-spacing: 0;
