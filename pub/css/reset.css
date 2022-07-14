@@ -10,7 +10,7 @@ html, body {
 body {
     font-size: 16px;
     font-family: 'NotoSansKR', Arial, Sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--font-color);
 }
 table, th, td, input, select, button, textarea, pre {
@@ -34,7 +34,7 @@ img {
     vertical-align: middle;
 }
 a {
-    font-weight: 400;
+    font-weight: 300;
     text-decoration: none;
     color: var(--font-color);
 }
