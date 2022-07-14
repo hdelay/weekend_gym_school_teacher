@@ -512,6 +512,40 @@
                     <div class="box_input">
                         <input type="text">
                     </div>
+                    <br/>
+                    <div class="box_textarea">
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="box_item">
+                <h3>입력필드</h3>
+                <div class="box_item_cont">
+                    <div class="box_textfield">
+                        <label for="textfield_01">목록이름</label>
+                        <input type="text" id="textfield_01" placeholder="입력필드">
+                    </div>
+                    <br/>
+                    <div class="box_textfield error">
+                        <label for="textfield_02">목록이름</label>
+                        <input type="text" id="textfield_02" value="입력필드 에러">
+                    </div>
+                    <br/>
+                    <div class="box_input_group tel">
+                        <label for="">휴대폰</label>
+                        <div class="box_select">
+                            <select id="">
+                                <option value="">선택명</option>
+                            </select>
+                        </div>
+                        <div class="box_input">
+                            <input type="text">
+                        </div>
+                        <div class="box_input">
+                            <input type="text">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="box_item">
@@ -1025,14 +1059,16 @@
             <div class="box_item_cont">
                 <div class="box_paging">
                     <ul>
+                        <li class="prev_all"><a href="javascript:void(0);" title="최신페이지로 이동">최신페이지로 이동</a></li>
                         <li class="prev"><a href="javascript:void(0);" title="이전페이지로 이동">이전페이지로 이동</a></li>
-                        <li class="on"><a href="javascript:void(0);">01</a></li>
-                        <li><a href="javascript:void(0);">02</a></li>
-                        <li><a href="javascript:void(0);">03</a></li>
-                        <li><a href="javascript:void(0);">04</a></li>
-                        <li><a href="javascript:void(0);">05</a></li>
-                        <li><a href="javascript:void(0);">06</a></li>
+                        <li class="on"><a href="javascript:void(0);">1</a></li>
+                        <li><a href="javascript:void(0);">2</a></li>
+                        <li><a href="javascript:void(0);">3</a></li>
+                        <li><a href="javascript:void(0);">4</a></li>
+                        <li><a href="javascript:void(0);">5</a></li>
+                        <li><a href="javascript:void(0);">6</a></li>
                         <li class="next"><a href="javascript:void(0);" title="다음페이지로 이동">다음페이지로 이동</a></li>
+                        <li class="next_all"><a href="javascript:void(0);" title="마지막페이지로 이동">마지막페이지로 이동</a></li>
                     </ul>
                 </div>
             </div>
@@ -1040,20 +1076,52 @@
         <!-- 서치박스 -->
         <div class="box_group">
             <div class="box_item">
-                <h2 id="cont_10">리스트</h2>
+                <h2 id="cont_10">서치박스</h2>
                 <div class="box_item_cont">
-                    <div class="box_text_list">
+                    <div class="box_search">
                         <ul>
-                            <li><strong class="color_blue">올해부터 정원 20명 기준 15%(3명) 동연령대 청소년은 우선모집 대상으로 신청시간과 관계없이 우선권으로 1번부터 3번까지 들어가게 됩니다.</strong></li>
-                            <li><strong class="color_blue">우선대상(1~3번) 이후 신청자는 일반학생과 동일하며 동연령대 청소년 신청자가 없는 경우에는 선착순 신청 순서대로 신청현황이 보여집니다.</strong></li>
-                            <li>동연령대 청소년 : 학교에 다니지 않는 청소년을 말함</li>
+                            <li>
+                                <div class="box_select">
+                                    <select id="">
+                                        <option value="">선택명</option>
+                                    </select>
+                                </div>
+                                <div class="box_select">
+                                    <select id="">
+                                        <option value="">선택명</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_select">
+                                    <select id="">
+                                        <option value="">선택명</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_input">
+                                    <input type="text">
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 리스트 -->
-        <div class="box_group"></div>
+        <div class="box_group">
+            <div class="box_item">
+                <h2 id="cont_11">리스트</h2>
+                <div class="box_item_cont">
+                    <div class="box_txtlist">
+                        <ul>
+                            <li>공지/안내 비밀번호는 6~20자로 영문자, 숫자, 특수문자를 조합하여 만들어주세요</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

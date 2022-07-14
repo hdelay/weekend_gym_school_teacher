@@ -68,6 +68,21 @@
     background-color: rgb(204 204 204);
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: rgb(204 204 204);
+}
+select:hover,
+select:focus,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    outline: none;
+    border: 1px solid var(--font-color);   
+    box-sizing: border-box;
+}
+
 /* 라디오박스 */
 .box_radio_group {
     display: flex;
@@ -145,11 +160,12 @@
     content: "";
     display: block;
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 0;
     width: 22px;
     height: 22px;
     border: 1px solid rgb(204 204 204);
+    box-sizing: border-box;
     background-color: #fff;
     border-radius: 50%;
 }
@@ -157,7 +173,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 7px;
+    top: 5px;
     left: 5px;
     width: 11px;
     height: 6px;
@@ -183,10 +199,50 @@
     transform: rotate(-45deg) translateX(-70%);
 }
 
+/* 인풋박스 */
+.box_input {
+    display: flex;
+    width: 100%;
+}
+.box_input input {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(238 238 238);
+    border-radius: 4px;
+    padding: 11px 17px;
+    box-sizing: border-box;
+    font-size: var(--font-common);
+}
+.box_input input:hover,
+.box_input input:focus {
+    border-color: var(--font-color);
+}
+
+/* 텍스트박스 */
+.box_textarea {
+    display: flex;
+    width: 100%;
+}
+.box_textarea textarea {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(238 238 238);
+    border-radius: 4px;
+    padding: 13px 17px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: var(--font-common);
+}
+.box_textarea textarea:hover,
+.box_textarea textarea:focus {
+    border-color: var(--font-color);
+}
+
 /* 셀렉트박스 */
 select::-ms-expand { 
 	display: none;
 }
+
 .box_select select {
     -o-appearance: none;
     -webkit-appearance: none;
@@ -200,5 +256,90 @@ select::-ms-expand {
     background-size: 10px;
     border-radius: 4px;
     font-size: var(--font-common);
+    font-weight: 300;
     color:rgb(204 204 204);
+}
+.box_select select:hover,
+.box_select select:focus {
+    border-color: var(--font-color);
+}
+
+/* 텍스트필드 */
+.box_textfield {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+.box_textfield label {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 17px;
+    width: 100%;
+    font-size: 12px;
+    cursor: default;
+}
+.box_textfield input {
+    display: block;
+    width: 100%;
+    padding: 32px 17px 10px 17px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(238 238 238);
+}
+
+.box_textfield input:hover,
+.box_textfield input:focus {
+    border-color: var(--font-color);
+}
+.box_textfield.error input {
+    border-color: rgb(255 0 0);
+}
+
+.box_input_group.tel {
+    display: flex;
+    position: relative;
+    padding: 32px 17px 10px 17px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(238 238 238);
+    gap: 5px;
+}
+.box_input_group.tel:hover {
+    border-color: var(--font-color);
+}
+.box_input_group.tel label {
+    position: absolute;
+    top: 10px;
+    left: 17px;
+    width: 100%;
+    font-size: 12px;
+    cursor: default;
+}
+.box_input_group.tel .box_select {
+    flex: 1;
+    height: 30px;
+}
+.box_input_group.tel .box_select select {
+    padding: 3px 10px;
+    height: 100%;
+    background-position: calc(100% - 10px) center;
+    background-color: rgb(238 238 238);
+}
+.box_input_group.tel .box_input {
+    flex: 1;
+    height: 30px;
+}
+.box_input_group.tel .box_input input {
+    border: 1px solid transparent;
+    padding: 3px 10px;
+    box-sizing: border-box;
+}
+.box_input_group.tel .box_input input:hover,
+.box_input_group.tel .box_input input:focus {
+    border-color: var(--font-color);
+}
+.box_input_group.tel .box_input:nth-child(3)::after {
+    content: "-";
+    margin-left: 5px;
 }

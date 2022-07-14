@@ -315,3 +315,84 @@ header .logo {
 .box_tit + .box_tit h3 {
     margin-top: 27px;
 }
+
+/* 페이징 */
+.box_paging ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+.box_paging ul li {
+    display: flex;
+    align-items: center;
+}
+.box_paging ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-size: var(--font-s);
+    color: #cacacf;
+    transition: color .3s;
+}
+.box_paging ul li.on a,
+.box_paging ul li:hover a {
+    border-color: var(--main-color);
+    font-weight: 500;
+    color: #000;
+}
+.box_paging ul li.prev a,
+.box_paging ul li.prev_all a,
+.box_paging ul li.next a,
+.box_paging ul li.next_all a {
+    position: relative;
+    width: 15px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    text-indent: -9999rem;
+    background: no-repeat center;
+    background-size: auto 100%;
+}
+.box_paging ul li.prev a {
+    background-image: url(../images/ico/ico_prev.png);
+}
+.box_paging ul li.prev_all a {
+    background-image: url(../images/ico/ico_prev_all.png);
+}
+.box_paging ul li.next a {
+    background-image: url(../images/ico/ico_next.png);
+}
+.box_paging ul li.next_all a {
+    background-image: url(../images/ico/ico_next_all.png);
+}
+
+/* 리스트 */
+.box_txtlist {
+    display: flex;
+    padding: 28px 18px;
+    background-color: rgb(238 238 238);
+    border-radius: 4px;
+    font-size: var(--font-common);
+    color: var(--font-color);
+}
+
+/* 서치박스 */
+.box_search ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.box_search ul li {
+    display: flex;
+    gap: 15px;
+}
+.box_search ul li > * {
+    flex: 1;
+}
