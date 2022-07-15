@@ -19,7 +19,7 @@
 /* inner */
 .inner {
     position: relative;
-    width: 1200px;
+    width: 600px;
     margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
