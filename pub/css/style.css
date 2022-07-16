@@ -159,6 +159,10 @@
 .box_allmenu nav > ul {
     margin: 0 -20px;
 }
+.box_allmenu nav > ul > li {
+    position: relative; 
+    border-bottom: 1px solid #eee;
+}
 .box_allmenu nav > ul > li > a::after {
     content: "";
     display: block;
@@ -173,10 +177,6 @@
 }
 .box_allmenu nav > ul > li.on > a::after {
     transform: rotate(180deg);
-}
-.box_allmenu nav > ul > li {
-    position: relative;
-    border-bottom: 1px solid #eee;
 }
 .box_allmenu nav > ul > li:first-child {
     border-top: 1px solid #eee;
@@ -343,8 +343,40 @@ footer {
     height: 15px;
     background-color: rgb(153 153 153);
 }
-.box_login + .box_txtlist {
-    margin-top: calc(100vh - 599px);
+.box_changepage {
+    margin-top: 60px;
+}
+.box_changepage a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 106px;
+    border-radius: 4px;
+    background: url(../images/content/content_main_woman.png) no-repeat calc(100% - 30px) calc(100% + 57px);
+    background-size: 130px auto;
+    background-color: rgb(250 239 230);
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.box_changepage a span {
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.box_changepage a strong {
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+.box_changepage a em {
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.box_changepage + .box_txtlist {
+    margin-top: 20px;
 }
 
 /* 메인 */
@@ -477,7 +509,7 @@ footer {
     color: rgb(204 204 204);
 }
 .main_content .box_section.sec_notice ul li a {
-    max-width: calc(100% - 70px);
+    width: calc(100% - 70px);
     font-size: 14px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -493,4 +525,135 @@ footer {
 .main_view footer {
     background-color: rgb(78 77 87);
     color: rgb(153 153 153);
+}
+
+/* 아이디찾기 */
+.box_content.type_01 .box_txtlist {
+    margin-bottom: 20px;
+}
+.box_content.type_01 .box_textfield,
+.box_content.type_01 .box_input_group {
+    margin-bottom: 10px;
+}
+.box_content.type_01 .box_btn {
+    margin-top: 20px;
+}
+.box_txtlist .box_idresult {
+    line-height: 20px;
+    font-size: 14px;
+}
+.box_txtlist .box_idresult span {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+/* 비밀번호 재설정 */
+.box_btn.certification_Number {
+    justify-content: flex-end;
+    margin-top: 5px !important;
+    margin-bottom: 20px;
+}
+.box_btn.certification_Number * {
+    flex: none;
+    width: auto;
+    height: auto;
+    padding: 7px 20px;
+    border: 1px solid rgb(204 204 204);
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--main-color);
+}
+
+/* 일지작성 버튼 */
+.btn_daily_report {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.btn_daily_report a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    line-height: 17px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 출석정보입력 */
+.box_attendance {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 18px;
+    margin: 13px 0 20px;
+    background-color: rgb(238 238 238);
+    border-radius: 4px;
+    font-size: var(--font-common);
+    color: var(--font-color);
+}
+.box_attendance span:nth-child(1) {
+    font-weight: 500;
+    color: rgb(153 153 153);
+}
+.box_attendance .tit {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--font-color);
+}
+
+/* 공지사항 */
+.attachments a {
+    display: inline-block;
+    padding-left: 30px;
+    background: url(../images/ico/ico_folder.png) no-repeat left center;
+    background-size: auto 18px;
+    font-size: var(--font-common);
+}
+.attachments a span {
+    padding-left: 5px;
+}
+.box_detail {
+    margin-bottom: 40px;
+}
+.box_detail dl dt {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid rgb(232 232 232);
+    font-size: 18px;
+    font-weight: 600;
+}
+.box_detail dl .info {
+    display: flex;
+    gap: 10px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgb(232 232 232);
+}
+.box_detail dl .info span {
+    font-size: 12px;
+    color: rgb(153 153 153);
+}
+.box_detail dl .info span:nth-child(1) {
+    width: calc(100% - 125px);
+}
+.box_detail dl .content {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.box_detail dl .content img {
+    width: 100%;
+}
+.box_detail dl:last-child {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(153 153 153);
+}
+.box_detail + .box_btn {
+    margin-bottom: 40px;
 }
