@@ -228,7 +228,7 @@ module.exports = {
 
 tmripple.init();
 
-// PC 전체메뉴
+// 전체메뉴
 $('.btn_allmenu a').on('click', function(e){
     e.preventDefault();
     $('.box_allmenu').animate({
@@ -259,62 +259,6 @@ $('.box_allmenu nav > ul > li').on('click', function(){
     }
 });
 
-// 더보기 버튼
-$('.box_detail_content > .inner > .box_btn *').on('click', function(){
-    $(this).parent().parent().find('.table_data.type_02').addClass('on');
-    $(this).parent().parent().find('ul').addClass('on');
-});
-$('.box_btn.type_more *').on('click', function(){
-    $(this).parent().siblings().addClass('on');
-});
-
-// 윈도우 팝업
-function popup(width, height, url){
-    var rtnVal;
-    var nWidth = width;
-    var nHeight = height;
-    var curWidth = document.body.clientWidth;
-    var curHeight = document.body.clientHeight;
-    
-    var nLeft = (document.body.clientWidth / 2) - (nWidth / 2);
-    var nTop = (window.screen.height / 2) - (nHeight / 2);
-    
-    var strOption = '';
-    strOption += 'left=' + nLeft + ',';
-    strOption += 'top=' + nTop + ',';
-    strOption += 'width=' + nWidth + ',';
-    strOption += 'height=' + nHeight + ',';
-    strOption += 'toolbar=no, status=no, menubar=no, resizable=yes, location=no scrollbars=yes';
-    
-    rtnVal = strOption;
-    return window.open(url, "_blank", rtnVal);
-}
-
-// 로그인정보 변경
-$('.change button').on('click', function(){
-    $(this).parents('.table_info').addClass('on');
-    $(this).parent().hide();
-});
-$('.box_change .box_btn .btn_white').on('click', function(){
-    $('.table_info').removeClass('on');
-    $('.change').show();
-});
-
-// window 스크롤 이벤트
-$(window).scroll(function(){
-    let winTop = $(window).scrollTop();
-    if(winTop > 1000) {
-        $('.table_responsive .table_notice').delay(1000).fadeOut();
-    }
-});
-
-// 자주묻는질문
-$('.box_question').on('click', function(e){
-    e.preventDefault();
-    $(this).parent().siblings().removeClass('on');
-    $(this).parent().toggleClass('on');
-});
-
 // 파일선택
 $('.box_file_input').on('change', function(){
     let files = $(this)[0].files;
@@ -323,32 +267,3 @@ $('.box_file_input').on('change', function(){
         $(this).siblings('.file_value').text(files[i].name);
     }
 });
-
-// 지도여닫기
-$('.box_info_header').on('click', function(){
-    $('.box_infomation').toggleClass('on');
-});
-
-// 핀 닫기
-$('.box_map_group .close').on('click', function(e){
-    e.preventDefault();
-    $(this).parent().parent().hide();
-});
-
-// 체크박스 전체동의
-$("#cbx_chkAll").click(function() {
-    if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
-    else $("input[name=chk]").prop("checked", false);
-});
-
-$("input[name=chk]").click(function() {
-    const total = $("input[name=chk]").length;
-    const checked = $("input[name=chk]:checked").length;
-
-    if(total != checked) {
-        $("#cbx_chkAll").prop("checked", false);
-    } else {
-        $("#cbx_chkAll").prop("checked", true); 
-    }
-});
-  
