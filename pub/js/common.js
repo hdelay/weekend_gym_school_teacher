@@ -262,8 +262,33 @@ $('.box_allmenu nav > ul > li').on('click', function(){
 // 파일선택
 $('.box_file_input').on('change', function(){
     let files = $(this)[0].files;
+    console.log('fff');
             
     for(let i = 0; i < files.length; i++){
         $(this).siblings('.file_value').text(files[i].name);
     }
+});
+
+// 데이트피커
+$.datepicker.setDefaults({
+    dateFormat: 'yy-mm-dd',
+    prevText: '이전 달',
+    nextText: '다음 달',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    dayNames: ['Su', 'Mo', 'To', 'We', 'Th', 'Fr', 'Sa'],
+    dayNamesShort: ['Su', 'Mo', 'To', 'We', 'Th', 'Fr', 'Sa'],
+    dayNamesMin: ['Su', 'Mo', 'To', 'We', 'Th', 'Fr', 'Sa'],
+    showMonthAfterYear: true,
+    changeYear: true,
+    changeMonth: true
+});
+
+$(function() {
+    $(".datepicker input").datepicker({
+        showOn: "both",
+        buttonImage: "../images/ico/ico_datepicker.png",
+        buttonImageOnly: true,
+        buttonText: "날짜선택"
+    });
 });

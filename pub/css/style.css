@@ -392,12 +392,24 @@ footer {
     border-radius: 0 0 20px 20px;
 }
 .main_content .box_section.sec_main {
+    position: relative;
     justify-content: flex-end;
     text-align: right;
     padding-top: 70px;
-    background-color: var(--main-color);
+    background: var(--main-color) url(../images/content/teac_8_01_02.png) center;
     color: #fff;
     z-index: 4;
+}
+.main_content .box_section.sec_main::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url(../images/content/content_main_man.png) no-repeat -17px calc(100% + 9px);
+    z-index: -1;
 }
 .main_content .box_section.sec_main h2 span {
     display: block;
@@ -445,6 +457,7 @@ footer {
 }
 .main_content .box_section.sec_shortcut ul li a {
     display: flex;
+    position: relative;
     align-items: flex-end;
     width: 100%;
     height: 112px;
@@ -458,6 +471,23 @@ footer {
     letter-spacing: -.5px;
     font-weight: 600;
     color: #fff;
+}
+.main_content .box_section.sec_shortcut ul li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -14px;
+    right: 10px;
+    width: 55px;
+    height: 69px;
+}
+.main_content .box_section.sec_shortcut ul li:nth-child(1) a::after,
+.main_content .box_section.sec_shortcut ul li:nth-child(3) a::after {
+    background: url(../images/content/teac_8_02_02.png) no-repeat center;
+}
+.main_content .box_section.sec_shortcut ul li:nth-child(2) a::after,
+.main_content .box_section.sec_shortcut ul li:nth-child(4) a::after {
+    background: url(../images/content/teac_8_03_02.png) no-repeat center;
 }
 .main_content .box_section.sec_shortcut ul li:nth-child(2) a {
     background-color: var(--main-color);
@@ -630,6 +660,13 @@ footer {
     font-size: 18px;
     font-weight: 600;
 }
+.box_detail dl dt span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--main-color);
+}
 .box_detail dl .info {
     display: flex;
     gap: 10px;
@@ -656,4 +693,32 @@ footer {
 }
 .box_detail + .box_btn {
     margin-bottom: 40px;
+}
+
+/* 데이타없음 화면 */
+.box_data_none {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box_data_none span {
+    display: block;
+    margin-top: 35px;
+    font-size: 14px;
+    color: rgb(153 153 153);
+}
+.box_data_none::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+.box_data_none.type_01::before {
+    background-image: url(../images/content/img_none_01.png);
+}
+.box_data_none.type_02::before {
+    background-image: url(../images/content/img_none_02.png);
 }
