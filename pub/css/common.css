@@ -970,3 +970,18 @@ select::-ms-expand {
 .box_paging ul li:hover a {
     border-color: var(--admain-color);
 }
+
+/* 데이타 박스 */
+.box_data > ul > li {
+    position: relative;
+}
+.box_data ul li ul li .top {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.box_data ul li ul li .bottom {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
