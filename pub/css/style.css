@@ -355,7 +355,7 @@ footer {
     border-radius: 4px;
     background: url(../images/content/content_main_woman.png) no-repeat calc(100% - 30px) calc(100% + 57px);
     background-size: 130px auto;
-    background-color: rgb(250 239 230);
+    background-color: var(--sub-color-01);
     padding: 0 30px;
     box-sizing: border-box;
 }
@@ -722,4 +722,38 @@ footer {
 }
 .box_data_none.type_02::before {
     background-image: url(../images/content/img_none_02.png);
+}
+
+/* ============================================================
+    admin 버전
+============================================================ */
+/* 로고 */
+.admin .logo a strong span {
+    color: var(--admain-color);
+}
+.admin .box_changepage a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 106px;
+    border-radius: 4px;
+    background: url(../images/content/content_main_man.png) no-repeat calc(100% - 30px) calc(100% + 57px);
+    background-size: 130px auto;
+    background-color: var(--adsub-color-01);
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.admin .box_changepage a strong {
+    color: var(--admain-color);
+}
+
+/* 아이디찾기 */
+.box_txtlist .box_idresult span {
+    color: var(--admain-color);
+}
+
+/* 비밀번호 재설정 */
+.box_btn.certification_Number * {
+    color: var(--admain-color);
 }
