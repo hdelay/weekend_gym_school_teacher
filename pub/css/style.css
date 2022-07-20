@@ -724,6 +724,40 @@ footer {
     background-image: url(../images/content/img_none_02.png);
 }
 
+/* 에러페이지 */
+.box_error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+.box_error span {
+    display: block;
+    margin: 30px 0;
+    font-size: 14px;
+    color: rgb(153 153 153);
+}
+.box_error::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 166px;
+    background: no-repeat center;
+    background-size: auto 100%;
+} 
+.box_error.type_01::before {
+    background-image: url(../images/content/icon-error-06.png);
+}
+.box_error.type_02::before {
+    background-image: url(../images/content/icon-error-07.png);
+}
+.box_error.type_03::before {
+    background-image: url(../images/content/icon-error-08.png);
+}
+.box_error.type_04::before {
+    background-image: url(../images/content/icon-error-09.png);
+}
+
 /* ============================================================
     admin 버전
 ============================================================ */
@@ -836,6 +870,12 @@ footer {
 }
 
 /* 개인정보 다운로드 사유 입력 */
+.box_attendance .logo {
+    margin-bottom: 15px;
+}
+.box_attendance .logo a {
+    cursor: default;
+}
 .box_download_reason {
     display: flex;
     flex-direction: column;
@@ -868,4 +908,9 @@ footer {
 }
 .box_etc .box_input span strong {
     font-weight: 300;
+}
+
+/* 공지사항 */
+.box_detail dl dt span {
+    color: var(--admain-color);
 }

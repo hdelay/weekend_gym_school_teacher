@@ -103,90 +103,64 @@
     <div class="main">
         <div class="inner">
 
-            <div class="box_tit">
-                <h2>실적등록</h2>
+            <div class="box_tit left">
+                <h2>학교밖 실적확인</h2>
+                <h3>개인정보 다운로드 사유 입력</h3>
             </div>
 
             <div class="box_content">
 
-                <!-- 상세테이블 -->
-                <div class="table_detail">
-                    <table>
-                        <caption></caption>
-                        <colgroup>
-                            <col width="92px">
-                            <col width="">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>프로그램명</th>
-                                <td>축구</td>
-                            </tr>
-                            <tr>
-                                <th>회차</th>
-                                <td>1회차</td>
-                            </tr>
-                            <tr>
-                                <th>학교명</th>
-                                <td>학교이름뭘로하지초등학교</td>
-                            </tr>
-                            <tr>
-                                <th>강사명</th>
-                                <td>신사임당</td>
-                            </tr>
-                            <tr>
-                                <th>작성일시</th>
-                                <td>2022.06.16 15:47:30</td>
-                            </tr>
-                            <tr>
-                                <th>지도날짜</th>
-                                <td>2022.06.11</td>
-                            </tr>
-                            <tr>
-                                <th>지도시간</th>
-                                <td>10:00 - 12:00</td>
-                            </tr>
-                            <tr>
-                                <th>정원</th>
-                                <td>20명</td>
-                            </tr>
-                            <tr>
-                                <th>출석인원</th>
-                                <td>20명<a href="./MARS001_03M.html" class="btn_attendance_check">출석확인</a></td>
-                            </tr>
-                            <tr>
-                                <th>지도내용</th>
-                                <td>
-                                    드리블<br>
-                                    공격<br>
-                                    수비<br>
-                                    프리킥<br>
-                                    패널티킥<br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>건의사항</th>
-                                <td>없음</td>
-                            </tr>
-                            <tr>
-                                <th>수업사진</th>
-                                <td>
-                                    <img src="https://img.olympicchannel.com/images/image/private/t_16-9_3200/primary/faysujzgkb3fidtsofoz" alt="임시이미지">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>승인상태</th>
-                                <td>승인완료</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="box_attendance">
+                    <h1 class="logo">
+                        <a href="javascript:void(0);" title="로고">
+                            <span>방과후 스포츠프로그램</span>
+                            <strong>신나는 주말체육학교</strong>
+                        </a>
+                    </h1>
+                    <p>
+                        개인정보의 안전성 조치에 따라서 개인정보에 해당하는 자료를 다운로드 받는 경우 다운로드 내역과 사유를 시스템에 등록하게 되어있으므로 개인정보에 해당하는 자료를 다운르도 하는 경우 사유에 대하여 정확하게 입력하여 주시기 바랍니다.
+                    </p>
                 </div>
 
+                <dl class="box_download_reason">
+                    <dt>개인정보에 해당하는 자료를 다운로드 하는 사유를 선택하시기 바랍니다.</dt>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_01" name="radio_group">
+                            <label for="radio_01">업무상 출석자 명단 확인을 위함</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_02" name="radio_group">
+                            <label for="radio_02">학생 또는 강사 연락처 정보 확인</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_03" name="radio_group">
+                            <label for="radio_03">강사 채용을 위한 강사 이력서 확인</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_04" name="radio_group">
+                            <label for="radio_04">기타</label>
+                        </div>
+                        <div class="box_etc">
+                            <div class="box_input">
+                                <input type="text">
+                                <span>
+                                    <em>0</em>
+                                    <strong>/200bytes</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
                 <div class="box_btn">
-                    <a href="" data-animation="ripple" class="btn_main">승인</a>
-                    <a href="" data-animation="ripple" class="btn_orange">수정</a>
-                    <a href="" data-animation="ripple" class="btn_black">삭제</a>
-                    <a href="./MARS001_00M.html" data-animation="ripple" class="btn_gray">목록</a>
+                    <a href="" data-animation="ripple" class="btn_main">사유등록</a>
                 </div>
 
             </div>

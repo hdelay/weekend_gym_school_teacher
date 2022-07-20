@@ -866,6 +866,12 @@ select::-ms-expand {
 .box_data ul li ul li .tel {
     color: var(--font-color);
 }
+.box_data ul li ul li .del {
+    color: var(--main-color);
+}
+.admin .box_data ul li ul li .del {
+    color: var(--admain-color);
+}
 .box_data.type_02 {
     margin: 20px 0 40px;
 }
