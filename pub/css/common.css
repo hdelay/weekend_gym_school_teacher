@@ -76,6 +76,21 @@
 .box_btn *.btn_gray {
     background-color: rgb(204 204 204);
 }
+.box_btn *.btn_orange {
+    background-color: rgb(255 114 0);
+}
+.box_btn *.btn_excel {
+    background-color: rgb(75 166 106);
+}
+.box_btn *.btn_excel::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 19px;
+    margin-right: 5px;
+    background: url(../images/ico/ico_excel.png) no-repeat center;
+    background-size: auto 100%;
+}
 
 input::placeholder,
 textarea::placeholder {
@@ -266,7 +281,7 @@ input[type="password"] {
     position: absolute;
     top: 50%;
     right: 15px;
-    width: 17px;
+    width: 17px !important;
     height: 16px;
     margin-top: -8px;
     cursor: pointer;
@@ -804,6 +819,9 @@ select::-ms-expand {
     padding: 15px 20px;
     box-sizing: border-box;
 }
+.box_data > ul > li > div + a {
+    padding: 0;
+}
 .box_data ul li ul {
     width: 100%;
 }
@@ -918,19 +936,19 @@ select::-ms-expand {
     font-weight: 400;
     font-size: 12px;
 }
-.box_registration_list dl dd .program_name {
+.program_name {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.box_registration_list dl dd .program_name .box_input {
+.program_name .box_input {
     width: 60px;
 }
-.box_registration_list dl dd .program_name .box_input input {
+.program_name .box_input input {
     padding: 4px 10px;
     background-color: rgb(238 238 238);
 }
-.box_registration_list dl dd .program_name + span {
+.program_name + span {
     display: block;
     margin-top: 5px;
     letter-spacing: -0.84px;

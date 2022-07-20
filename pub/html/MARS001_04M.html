@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신나는 주말체육학교-강사시스템</title>
+
+    <!-- pub:css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- pub:js -->
+    <script defer src="../js/jquery-3.6.0.js"></script>
+    <script defer src="../js/jquery-ui.js"></script>
+    <script defer src="../js/common.js"></script>
+
+</head>
+<body>
+<div class="wrap admin">
+    <!-- header -->
+    <header>
+        <div class="inner">
+            <!-- 뒤로가기 -->
+            <div class="box_prev">
+                <a href="" title="뒤로가기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            
+            <!-- 로고
+            <h1 class="logo">
+                <a href="" title="로고">
+                    <span>방과후 스포츠프로그램</span>
+                    <strong>신나는 주말체육학교<span>관리자시스템</span></strong>
+                </a>
+            </h1>
+             -->
+            <!-- 전체메뉴 -->
+            <div class="btn_allmenu">
+                <a href="" title="전체메뉴">
+                    <strong>전체메뉴</strong>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="box_allmenu">
+                <div class="box_allmenu_cont">
+                    <div class="box_allmenu_btn">
+                        <a href="">
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="box_allmenu_info">
+                        <div class="box_util">
+                            <ul class="util_content">
+                                <li class="btn_login"><a href="MTMA001_00M.html" title="로그인">로그인</a></li>
+                            </ul>
+                            <!--                             
+                            <ul class="util_result">
+                                <li><strong>황화정님</strong></li>
+                                <li class="btn_logout"><a href="" title="로그아웃">로그아웃</a></li>
+                            </ul>
+                             -->
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="./MAMA002_00M.html" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="학교안 실적관리">학교안 실적관리</a>
+                                <ul>
+                                    <li><a href="./MARS001_00M.html" title="학교안 실적관리 목록">학교안 실적관리 목록</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="학교밖 실적관리">학교밖 실적관리</a>
+                                <ul>
+                                    <li><a href="./MTRS002_00M.html" title="학교밖 실적관리 목록">학교밖 실적관리 목록</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" title="공지사항">공지사항</a>
+                                <ul>
+                                    <li><a href="./MTBS001_00M.html" title="공지사항 목록">공지사항 목록</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <div class="main">
+        <div class="inner">
+
+            <div class="box_tit left">
+                <h2>학교안 실적확인</h2>
+                <h3>개인정보 다운로드 사유 입력</h3>
+            </div>
+
+            <div class="box_content">
+
+                <div class="box_attendance">
+                    <h1 class="logo">
+                        <a href="javascript:void(0);" title="로고">
+                            <span>방과후 스포츠프로그램</span>
+                            <strong>신나는 주말체육학교</strong>
+                        </a>
+                    </h1>
+                    <p>
+                        개인정보의 안전성
+                         조치에 따라서 개인정보에 해당하는 자료를 다운로드 받는 경우 다운로드 내역과 사유를 시스템에 등록하게 되어있으므로 개인정보에 해당하는 자료를 다운르도 하는 경우 사유에 대하여 정확하게 입력하여 주시기 바랍니다.
+                    </p>
+                </div>
+
+                <dl class="box_download_reason">
+                    <dt>개인정보에 해당하는 자료를 다운로드 하는 사유를 선택하시기 바랍니다.</dt>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_01" name="radio_group">
+                            <label for="radio_01">업무상 출석자 명단 확인을 위함</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_02" name="radio_group">
+                            <label for="radio_02">학생 또는 강사 연락처 정보 확인</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_03" name="radio_group">
+                            <label for="radio_03">강사 채용을 위한 강사 이력서 확인</label>
+                        </div>
+                    </dd>
+                    <dd>
+                        <div class="box_radio">
+                            <input type="radio" id="radio_04" name="radio_group">
+                            <label for="radio_04">기타</label>
+                        </div>
+                        <div class="box_etc">
+                            <div class="box_input">
+                                <input type="text">
+                                <span>
+                                    <em>0</em>
+                                    <strong>/200bytes</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+
+                <div class="box_btn">
+                    <a href="" data-animation="ripple" class="btn_main">사유등록</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer>CopyrightⓒKOCOSA. All Rights RReserved.</footer>
+    <!-- //footer -->
+
+</div>
+</body>
+</html>

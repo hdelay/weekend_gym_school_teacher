@@ -749,11 +749,123 @@ footer {
 }
 
 /* 아이디찾기 */
-.box_txtlist .box_idresult span {
+.admin .box_txtlist .box_idresult span {
     color: var(--admain-color);
 }
 
 /* 비밀번호 재설정 */
-.box_btn.certification_Number * {
+.admin .box_btn.certification_Number * {
     color: var(--admain-color);
+}
+
+/* 메인 */
+.admin .main_content .box_section.sec_main {
+    background-color: var(--admain-color);
+}
+.admin .main_content .box_section.sec_main::after {
+    width: 100%;
+    background: url(../images/content/adm_8_01_01.png) no-repeat 0 calc(100% + 9px);
+}
+.admin .main_content .box_section.sec_shortcut:nth-child(2) {
+    background-color: var(--adsub-color-01);
+}
+.admin .main_content .box_section.sec_shortcut ul li {
+    width: 100%;
+    max-width: 100%;
+}
+
+.admin .main_content .box_section.sec_shortcut:nth-child(3) ul li a::after {
+    background: url(../images/content/adm_8_02_02.png) no-repeat center;
+    background-size: 100%;
+}
+.admin .main_content .box_section.sec_shortcut:nth-child(4) ul li a::after {
+    background: url(../images/content/adm_8_03_02.png) no-repeat center;
+    background-size: 100%;
+}
+.main_content .box_section.sec_shortcut:nth-child(3) ul li:nth-child(1) a {
+    background-color: var(--admain-color);
+}
+.admin .main_content .box_section.sec_shortcut h3 span {
+    color: var(--admain-color);
+}
+.admin .main_content .box_section.sec_notice h3 a {
+    color: var(--admain-color);
+}
+
+/* 실적상세 */
+.btn_attendance_check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    min-width: 100px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--admain-color);
+    transform: translateY(-50%);
+}
+.table_detail table tbody tr td .box_input_group.time {
+    margin: 0;
+    gap: 5px;
+}
+.table_detail .box_input_group.time span {
+    gap: 5px;
+    width: calc(50% - 7px);
+}
+.table_detail .box_input_group.time span:nth-child(2) {
+    width: 5px;
+}
+.table_detail .box_input_group.time span .box_select:nth-child(1)::after {
+    right: -5px;
+    margin-top: -12px;
+}
+.table_detail .box_input_group.time span .box_select select {
+    padding: 10px 5px;
+    padding-right: 7px;
+    background-position: calc(100% - 5px) center;
+}
+.table_detail .box_textarea textarea {
+    min-height: 150px;
+}
+
+/* 개인정보 다운로드 사유 입력 */
+.box_download_reason {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.box_download_reason dt {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.box_etc .box_input {
+    position: relative;
+    width: calc(100% + 18px);
+    margin-top: 5px;
+    margin-right: -18px;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+.box_etc .box_input input {
+    background-color: rgb(238 238 238);
+}
+.box_etc .box_input span {
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 11px;
+}
+.box_etc .box_input span strong {
+    font-weight: 300;
 }
