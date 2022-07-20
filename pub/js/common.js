@@ -297,6 +297,11 @@ $(function() {
 $('.box_etc input').keyup(function(){
     var string = $('.box_etc input').val();
     stringByteLength = string.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g,"$&$1$2").length;
-    console.log(stringByteLength + " Bytes");
     $('.box_etc .box_input em').text(stringByteLength);
+
+    if(stringByteLength > 200){
+        $('.box_etc .box_input em').css({'color': 'red'});
+    } else {
+        $('.box_etc .box_input em').css({'color': 'rgb(59 59 59)'});
+    }
 });
