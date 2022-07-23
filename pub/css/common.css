@@ -79,6 +79,9 @@
 .box_btn *.btn_orange {
     background-color: rgb(255 114 0);
 }
+.box_btn *.btn_green {
+    background-color: rgb(81 171 71);
+}
 .box_btn *.btn_excel {
     background-color: rgb(75 166 106);
 }
@@ -227,6 +230,22 @@ textarea:focus {
     top: 1px;
     left: 50%;
     transform: rotate(-45deg) translateX(-70%);
+}
+.box_chk input:disabled + label::before {
+    top: 0 !important;
+    left: 0 !important;
+    border: 1px solid rgb(238 238 238);
+    transform: rotate(0) translateX(0) !important;
+}
+.box_chk input:disabled + label::after {
+    top: 3px !important;
+    left: 3px !important;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 50%;
+    background-color: rgb(238 238 238);
+    transform: rotate(0) translateX(0) !important;
 }
 
 /* 인풋박스 */
@@ -783,10 +802,18 @@ select::-ms-expand {
 }
 .box_board_list ul li a > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     width: 100%;
     margin-top: 20px;
+}
+.box_board_list ul li a > div .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 154px;
 }
 .box_board_list ul li a > div span {
     font-size: 12px;
@@ -883,6 +910,28 @@ select::-ms-expand {
 }
 .box_data.type_02 + .box_btn {
     margin-bottom: 40px;
+}
+.approve {
+    position: relative;
+    padding-right: 15px;
+}
+.approve::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(153 153 153);
+    transform: translateY(-40%);
+}
+.approve.green::after {
+    background-color: rgb(81 171 71);
+}
+.approve.orange::after {
+    background-color: rgb(255 114 0);
 }
 
 /* 테이블 */
@@ -985,7 +1034,7 @@ select::-ms-expand {
 }
 
 /* 제목 */
-.box_tit h2 span {
+.admin .box_tit h2 span {
     color: var(--admain-color);
 }
 

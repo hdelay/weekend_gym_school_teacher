@@ -343,8 +343,36 @@ footer {
     height: 15px;
     background-color: rgb(153 153 153);
 }
+.box_login_content {
+    margin-top: 20px; 
+    border-top: 1px solid rgb(232 232 232);
+    padding-top: 40px;
+}
+.box_key {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgb(204 204 204);
+}
+.box_key .box_textfield {
+    width: 100%;
+}
+.box_key button {
+    margin-top: 6px;
+    padding: 7px 20px;
+    border: 1px solid rgb(204 204 204);
+    border-radius: 4px;
+    background-color: #fff;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--admain-color);
+    cursor: pointer;
+}
 .box_changepage {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 .box_changepage a {
     display: flex;
@@ -722,6 +750,9 @@ footer {
 }
 .box_data_none.type_02::before {
     background-image: url(../images/content/img_none_02.png);
+}
+.box_data_none.type_03::before {
+    background-image: url(../images/content/img_none_03.png);
 }
 
 /* 에러페이지 */
